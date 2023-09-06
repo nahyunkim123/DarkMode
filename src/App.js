@@ -5,7 +5,11 @@ import Detail from "./pages/Detail";
 import Aside from "./pages/Aside";
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
-// import Example3 from "./pages/Example3";
+import Example3 from "./pages/Example3";
+import Example from "./pages/Example";
+// import Example2 from "./components/Example2";
+import Example4 from "./pages/Example4";
+import Datepicker from "./pages/Datepicker";
 // import { NavLink } from "react-router-dom";
 
 
@@ -15,14 +19,16 @@ function App() {
   const light = {
     colors : {
       Primary : "#fff8ef",
-      Secondary : "#102C57"
+      Secondary : "#102C57",
+      BgColor : "#e9f1f6"
   
     }
   }
   const dark ={
     colors : {
       Primary : "#102C57",
-      Secondary : "#fff8ef"
+      Secondary : "#fff8ef",
+      BgColor : "#333"
   
     }
   } 
@@ -44,8 +50,12 @@ function App() {
      </ul> */}
       <Routes>
         <Route path="/" element={<Main/>}></Route>
-        {/* <Route path="/" element={<Example3/>}></Route> */}
-        <Route path="/detail" element={<Detail/>}></Route>
+        <Route path="/ex" element={<Example/>}></Route>
+        {/* <Route path="/ex2" element={<Example2/>}></Route> */}
+        <Route path="/ex3" element={<Example3/>}></Route>
+        <Route path="/ex4" element={<Example4/>}></Route>
+        <Route path="/detail/:seq" element={<Detail/>}></Route>
+        <Route path="/datepicker" element={<Datepicker/>}></Route>
       </Routes>
       <Aside ThemeSelect={ThemeSelect}  themeConfig={themeConfig}/>
 

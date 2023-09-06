@@ -3,6 +3,7 @@ import { styled } from 'styled-components'
 import Example3_ from './../components/Example3'
 
 
+
 const Nav = styled.div`
  width: 1200px;
  margin: 0 auto;
@@ -63,32 +64,28 @@ function Example3() {
 
 
 
-  // 2. 중복값 제거, 리스트 화면 출력
+  // 2. 1차 필터(종류) 할 데이터를 담을 변수 
  
   const [animal, setAnimal] = useState("전체");
-  
+  // 2-1. 2차 필터(성별)할 데이터를 담을 변수 
+  const [gender, setGender] = useState("전체")
 
 
+
+  // 3. 카테고리 분류하는 필터
   const dataFilter = data.filter(e =>{
-    if(animal === "전체"){
-      return e.animal
 
-    }else{
-      return e.animal === animal
-
-    }
-
-    
+    let isAnimal = animal === "전체" || e.animal === animal;
+    let isGender = gender === "전체" || e.gender === gender;
+    return isAnimal && isGender
+  }
+  )
   
-    
-    
- 
-   
-  })
 
 
-  
+  // 중복값 제거, 리스트 화면 출력
    const typeFilter = [...new Set(data.map(e=> e.animal))];
+   const filterGender = [...new Set(data.map(e=> e.gender))];
   
 
   return (
@@ -108,6 +105,23 @@ function Example3() {
           }
           </li>
         </ul>
+
+        {/* 젠더 필터 */}
+      <ul>
+          <li onClick={()=>{setGender("전체")}}>전체</li>
+          <li>
+          {
+            filterGender.map((e,i)=>{
+              return(
+                <li key={i} onClick={()=>{setGender(e)}}>{e}</li>
+
+              )
+            })
+          }
+          </li>
+        </ul>
+
+        
     </Nav>
     <Style>
      

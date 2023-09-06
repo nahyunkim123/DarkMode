@@ -10,14 +10,14 @@ const ASide = styled.div`
         right: 20px;
         bottom: 20px;
         box-shadow: 0px 0px 3px gray;
-        background-color:  ${(props) => props.theme.colors.Primary};
+        background-color:  ${(props) => props.theme.colors.Secondary};
         border-radius: 50%;
         cursor: pointer;
         width: 50px;
         height: 50px;
         line-height: 50px;
         text-align: center;
-        color: ${(props) => props.theme.colors.Secondary};
+        color: ${(props) => props.theme.colors.Primary};
     `
 
 function Aside({ThemeSelect, themeConfig}) {

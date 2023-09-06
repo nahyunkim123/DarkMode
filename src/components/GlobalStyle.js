@@ -10,8 +10,9 @@ const GlobalStyle = createGlobalStyle`
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
+    
 }
-
+a{text-decoration:none; color:black;}
 `
 
 
