@@ -20,7 +20,10 @@ function App() {
     colors : {
       Primary : "#fff8ef",
       Secondary : "#102C57",
-      BgColor : "#e9f1f6"
+      BgColor : "#f0f4f8",
+      Color : "black",
+      ContentBg : "#fff"
+      
   
     }
   }
@@ -28,7 +31,10 @@ function App() {
     colors : {
       Primary : "#102C57",
       Secondary : "#fff8ef",
-      BgColor : "#333"
+      BgColor : "#333",
+      Color : "#fff8ef",
+      ContentBg : "#424242",
+      SelectBg : "#707173"
   
     }
   } 

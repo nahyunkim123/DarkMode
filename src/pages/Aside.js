@@ -17,6 +17,7 @@ const ASide = styled.div`
         height: 50px;
         line-height: 50px;
         text-align: center;
+        z-index: 500000;
         color: ${(props) => props.theme.colors.Primary};
     `
 
